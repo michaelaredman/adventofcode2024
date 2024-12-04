@@ -45,16 +45,6 @@ def total_safety(reports: list[list[int]]):
 print(total_safety(data))
 
 
-def increasing_check(levels: list[int]):
-    inc, dec = 0, 0
-    for diff in (j - i for i, j in zip(levels, levels[1:])):
-        if diff > 0:
-            inc += 1
-        elif diff < 0:
-            dec += 1
-    return True if inc > dec else False
-
-
 def safety_damped(levels: list[int]):
     if safety_check(levels) == True:
         return True
