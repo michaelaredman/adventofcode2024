@@ -3,9 +3,6 @@ file = "./inputs/day6"
 grid = [list(line)
         for line in open(file, 'r').read().splitlines()]
 
-# 1740 too high
-# 1688 is correct
-
 
 def find_start(grid: list[list[chr]]) -> tuple[int]:
     for r in range(len(grid)):
