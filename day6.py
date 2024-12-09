@@ -89,7 +89,7 @@ def find_loops2(grid: list[list[chr]], pos: tuple[int], dir):
             else:
                 r, c = new_r, new_c
                 visited[(r, c)] += 1
-                if (visited[(r, c)] > 6):
+                if (visited[(r, c)] >= 4):
                     return new_obstacle
         else:
             return (-1, -1)
