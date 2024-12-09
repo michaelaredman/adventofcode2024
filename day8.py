@@ -31,10 +31,10 @@ class Field:
             for i in range(0, len(locations) - 1):
                 for j in range(i + 1, len(locations)):
                     l1, l2 = locations[i], locations[j]
-                    if self._check_bounds((2*l2[0] - l1[0], 2*l2[1] - l1[1])):
-                        self.antinodes.add((2*l2[0] - l1[0], 2*l2[1] - l1[1]))
-                    if self._check_bounds((2*l1[0] - l2[0], 2*l1[1] - l2[1])):
-                        self.antinodes.add((2*l1[0] - l2[0], 2*l1[1] - l2[1]))
+                    if self._check_bounds(node := (2*l2[0] - l1[0], 2*l2[1] - l1[1])):
+                        self.antinodes.add(node)
+                    if self._check_bounds(node := (2*l1[0] - l2[0], 2*l1[1] - l2[1])):
+                        self.antinodes.add(node)
         return self.antinodes
 
     def harmonic_antinodes(self):
