@@ -55,11 +55,6 @@ class Field:
         return self.antinodes
 
 
-# for each freq
-# for each pair of ants (i = 0 -> n - 2, j = i + 1 -> n-1)
-# calculate diff
-# add diff to one adn subtract from the other
-# if in the grid bounds, add to a list of coords or dict (check problem)
 field = Field(grid)
 antinodes = field.find_antinodes()
 print(f"{len(antinodes)=}")
